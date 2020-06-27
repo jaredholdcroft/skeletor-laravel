@@ -1,5 +1,5 @@
 {
-    "name": "ams/skeletor-laravel",
+    "name": "jaredholdcroft/skeletor-laravel",
     "description": "Scaffolds components and modules for skeletor architecture",
     "version": "0.1.0",
     "type": "library",
@@ -13,8 +13,8 @@
     ],
     "authors": [
         {
-            "name": "Nate Luzod",
-            "email": "nluzod@atlanticmedia.com"
+            "name": "Jared Holdcroft",
+            "email": "jholdcroft@igicom.com"
         }
     ],
     "autoload": {
