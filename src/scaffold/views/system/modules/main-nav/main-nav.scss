@@ -1,0 +1,8 @@
+// Style for main-nav
+
+.main-nav {
+	&__link {
+		@include type-scale(1);
+		display: inline;
+	}
+}

@@ -1,0 +1,57 @@
+/// @name Grid - Breakpoints
+/// @group Basics
+/// @author AMS Product
+
+// Set column count globally, applies only to default / small
+$grid-columns: 6;
+
+$breakpoints: (
+  small: (
+    max: rem(768)
+  ),
+  medium: (
+    min: rem(769),
+    max: rem(1024)
+  ),
+  large: (
+    min: rem(1025),
+    max: rem(1440)
+  )
+);
+
+$small-only:    new-breakpoint(max-width map-get-z($breakpoints, small,  max));
+$medium:        new-breakpoint(min-width map-get-z($breakpoints, medium, min) 12);
+$medium-only:   new-breakpoint(min-width map-get-z($breakpoints, medium, min)
+                               max-width map-get-z($breakpoints, medium, max) 12);
+$large:         new-breakpoint(min-width map-get-z($breakpoints, large, min) 12);
+
+
+/// @name Grid - Full Width
+/// @group Basics
+/// @author AMS Product
+///  div {
+///    @include grid-full;
+///  }
+/// Make something 100% width with a float
+
+@mixin grid-full() {
+  position: relative;
+  width: 100%;
+  float: left;
+  margin: 0;
+}
+
+/// @name Grid - Container
+/// @group Basics
+/// @author AMS Product
+///  div {
+///    @include grid-container;
+///  }
+/// Give a container a max width and center it. Normally used as __wrap or __inner elements.
+
+@mixin grid-container() {
+  position: relative;
+  margin: 0 auto;
+  width: 90%;
+  max-width: map-get-z($breakpoints, large, max);
+}

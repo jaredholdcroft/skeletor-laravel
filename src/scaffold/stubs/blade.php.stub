@@ -1,0 +1,13 @@
+{{-- -----------------------------------
+  -- {{ type }}: {{ slug }}
+  -- -----------------------------------
+  -- arguments
+  -- - component_title {string}
+  -- - component_content {string}
+  -- - component_image {array}
+  --
+  --}}
+
+<{{ element }} class="{{ slug }}">
+
+</{{ element }}>

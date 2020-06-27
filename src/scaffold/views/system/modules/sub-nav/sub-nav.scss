@@ -1,0 +1,8 @@
+// Style for sub-nav
+
+.sub-nav {
+	&__link {
+		@include type-scale(0);
+		display: inline;
+	}
+}

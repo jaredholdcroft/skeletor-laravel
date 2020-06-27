@@ -1,0 +1,42 @@
+/// Sets font-size and line-height in both `px` and `rem`
+/// @name Font Combo
+/// @group Typography
+/// @param {integer} $font-size [16] - needed font size, in pixels
+/// @param {integer} $line-height [16] - needed line-height, in pixels
+/// @example
+///  .title {
+///    @include font-combo(16,24);
+///  }
+
+@mixin font-combo($font-size:16,$line-height:24) {
+  font-size: rem($font-size);
+  line-height: rem($line-height);
+}
+
+
+
+/// Adds font-smoothing, chrome only
+/// @name Font Smoothing
+/// @group Typography
+/// @example
+/// .title {
+///   @include font-smoothing;
+/// }
+
+@mixin font-smoothing {
+  -webkit-font-smoothing: antialiased;
+}
+
+
+/// Sans font for the library
+/// @name sans
+
+/// @group Typography
+/// @example
+/// .title {
+///   @include sans;
+/// }
+
+@mixin sans {
+  font-family: 'Lato', Helvetica, Arial, sans-serif;
+}

@@ -1,0 +1,3 @@
+// Script for {{ slug }}
+
+import domready from 'domready';

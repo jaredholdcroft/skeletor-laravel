@@ -1,0 +1,9 @@
+// Style for global-header
+
+.global-header {
+	background: $gray;
+
+	&__title {
+		font-weight: normal;
+	}
+}

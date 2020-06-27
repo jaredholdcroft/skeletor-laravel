@@ -1,0 +1,25 @@
+{
+    "name": "ams/skeletor-laravel",
+    "description": "Scaffolds components and modules for skeletor architecture",
+    "version": "0.1.0",
+    "type": "library",
+    "keywords": [
+        "twig",
+        "laravel",
+        "generator",
+        "scaffolding",
+        "components",
+        "modules"
+    ],
+    "authors": [
+        {
+            "name": "Nate Luzod",
+            "email": "nluzod@atlanticmedia.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "AMS\\Skeletor\\": "src/"
+        }
+    }
+}

@@ -1,0 +1,74 @@
+/// @name Type - Modular Scale Ratio
+/// @group Basics
+/// Set default sizing. Use scales listed at http://www.modularscale.com/
+
+$modular-scale-ratio: $perfect-fourth;
+
+/// @name Type - Modular Scale Base
+/// @group Basics
+/// Set default base
+
+$modular-scale-base: 1.2em;
+
+/// @name Type - Face
+/// @group Basics
+/// @param {string} $family - font family, sans or serif
+/// @param {int} $weight - font weight, 400 goes without saying
+/// @param {string} $style - font style, normal goes without saying
+/// @example
+/// .title {
+///   @include type-face(serif, 700, italic);
+/// }
+/// Uniform use of fonts
+
+@mixin type-face($family: sans, $weight: 400, $style: 'normal') {
+
+  // Maybe set font-family default on body, too?
+  @if $family == 'sans' {
+    font-family: 'Droid Sans', Helvetica, Arial, sans-serif;
+  }
+
+  @if $family == 'serif' {
+    font-family: 'Droid Serif', Times, Georgia, serif;
+  }
+
+  // Only print weight if specified, otherwise
+  // font-weight: 400 is already set on body
+  @if $weight != 400 {
+    font-weight: $weight;
+  }
+
+  // Only print weight if specified, otherwise
+  // font-weight: 400 is already set on body
+  @if $style != 'normal' {
+    font-style: $style;
+  }
+}
+
+/// @name Type - Scale
+/// @group Basics
+/// @param {integer} $size [0] - how big?
+/// @example
+///  .title {
+///    @include type-scale(2);
+///  }
+/// Harmonious font sizes. Wraps bourbon's modular-scale()
+/// into something that outputs line-height.
+
+@mixin type-scale($size: 0) {
+  line-height: 1.66;
+  font-size: modular-scale($size);
+}
+
+/// @name Type - Smooth
+/// @group Basics
+/// @example
+/// .title {
+///   @include type-smooth;
+/// }
+/// Adds font-smoothing, FireFox and Webkit only
+
+@mixin type-smooth {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

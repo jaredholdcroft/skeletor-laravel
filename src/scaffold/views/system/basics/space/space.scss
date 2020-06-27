@@ -1,0 +1,35 @@
+/// @name Space - Value
+/// @author AMS Product
+/// @group Basics
+/// @param {string} - size [small] - multiplies by $size-base and gets rem'd
+/// Returns a calulated value for size
+
+@function space($size) {
+  $base: 16; // default base
+  $factor: 1; // default factor
+
+  @if $size == tiny {
+    $factor: 0.5;
+  } @else if $size == small {
+    $factor: 1;
+  } @else if $size == medium {
+    $factor: 2;
+  } @else if $size == large {
+    $factor: 3;
+  } @else if $size == xlarge {
+    $factor: 4;
+  }
+
+  @return rem($factor * $base);
+}
+
+/// @name Space - Center
+/// @author AMS Product
+/// @group Basics
+/// Centers an element vertically and horizontally within its parent
+/// Parent must be relative or absolute positioned.
+
+@mixin space-center {
+  @include position(absolute 50% null null 50%);
+  transform: translate(-50%, -50%);
+}
